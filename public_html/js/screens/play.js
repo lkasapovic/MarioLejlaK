@@ -8,7 +8,7 @@ game.PlayScreen = me.ScreenObject.extend({
 
         me.levelDirector.loadLevel("level04");
 
-        this.resetPlayer(400, 0);
+        this.resetPlayer(0, 420);
 
         me.input.bindKey(me.input.KEY.RIGHT, "right");
 
@@ -25,8 +25,8 @@ game.PlayScreen = me.ScreenObject.extend({
     },
     
     resetPlayer: function() {
-        var player = me.pool.pull("mario", 400, 0 , {});
-            me.game.world.addChild(player, 3);
+        var player = me.pool.pull("mario", 0, 420 , {});
+            me.game.world.addChild(player, 5);
     }
     
 });
