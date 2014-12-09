@@ -9,6 +9,8 @@ game.resources = [
     {name: "title-screen", type: "image", src: "data/img/title-screen.png"},
     {name: "slime", type: "image", src: "data/img/slime-spritesheet.png"},
     {name: "fr", type: "image", src: "data/img/fr.png"},
+//    {name: "mushroom", type: "image", src: "mushroom.png"},
+    
     /* Atlases 
      * @example
      * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -20,8 +22,9 @@ game.resources = [
      * {name: "example01", type: "tmx", src: "data/map/example01.json"},
      */
     {name: "level04", type: "tmx", src: "data/map/level04.tmx"},
-    {name: "level05", type: "tmx", src: "data/map/level05.tmx"},
-    {name: "level06", type: "tmx", src: "data/map/level06.tmx"}
+    {name: "level05", type: "tmx", src: "data/map/level05.tmx"}
+//    {name: "level06", type: "tmx", src: "data/map/level06.tmx"}
+    
     /* Background music. 
      * @example
      * {name: "example_bgm", type: "audio", src: "data/bgm/"},
