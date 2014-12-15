@@ -71,15 +71,15 @@ game.PlayerEntity = me.Entity.extend({
     },
     collideHandler: function(response) {
         var ydif = this.pos.y - response.b.pos.y;
-        
- // "b" represents waht were running into       
-        if(response.b.type === 'badguy') {
-            if(ydif <= -115){
+
+        // "b" represents waht were running into       
+        if (response.b.type === 'badguy') {
+            if (ydif <= -115) {
                 response.b.alive = false;
-            }else {
+            } else {
                 me.state.change(me.state.MENU);
             }
-          
+
         }
     }
 
@@ -93,13 +93,12 @@ game.LevelTrigger = me.Entity.extend({
         this.xSpawn = settings.xSpawn;
         this.ySpawn = settings.ySpawn;
     },
-    
     onCollision: function() {
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
         me.levelDirector.loadLevel(this.level);
         me.state.current().resetPlayer();
     }
-    
+
 });
 // Code for the bad guy
 game.BadGuy = me.Entity.extend({
@@ -121,7 +120,7 @@ game.BadGuy = me.Entity.extend({
         x = this.pos.x;
         this.startX = x;
         this.endx = x + width - this.spritewidth;
-        this.pos.x = x + width -this.spritewidth;
+        this.pos.x = x + width - this.spritewidth;
         this.updateBounds();
 
 // alwaysUpdate tells us that even if our character is not on the screen, the bad guy should be updated
@@ -165,21 +164,21 @@ game.BadGuy = me.Entity.extend({
 
 });
 
-game.Mushroom = me.Entity.extend({
-    init: function(x, y, settings) {
-        this._super(me.Entity, 'init', [x, y, {
-                image: "mushroom",
-                spritewidth: "64",
-                spriteheight: "64",
-                width: 64,
-                height: 64,
-                getShape: function() {
-                    return(new me.Rect(0, 0, 64, 64)).toPolygon();
-                    //change hitbox width and height\\
-                }
-            }]);
-        
-        me.collision.check(this);
-        this.type = "mushroom";    }
-});
-      
+//game.Mushroom = me.Entity.extend({
+//    init: function(x, y, settings) {
+//        this._super(me.Entity, 'init', [x, y, {
+//                image: "mushroom",
+//                spritewidth: "64",
+//                spriteheight: "64",
+//                width: 64,
+//                height: 64,
+//                getShape: function() {
+//                    return(new me.Rect(0, 0, 64, 64)).toPolygon();
+//                    //change hitbox width and height\\
+//                }
+//            }]);
+//        
+//        me.collision.check(this);
+//        this.type = "mushroom";    }
+//});
+//      
